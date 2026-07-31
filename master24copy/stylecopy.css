@@ -4,71 +4,102 @@
 }
 
 body {
-    background: #080808;
+    background-color: #080808;
+    background: url(images/Perfectbg.png) no-repeat;
     color: white;
-}
-
-.headder {
-    width: 100%;
-    height: 100vh;
-    background: url(images/BG.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
 
-.container {
-    padding: 10px 10%;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    height: 201px;
+.headder {
+    height: auto;
+    width: 92vw;
+    padding-left: 8vw;
 }
 
 .logo {
-    width: 200px;
-    padding-top: 20px;
+    margin: 1%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 20%;
 }
 
 .hero {
-    padding-top: 100px;
-    font-size: 25px;
-    margin-left: 8%;
+    margin-top: 10%;
+    width:80%;
+    height: 80%;
+    text-align: left;
+}
+
+.hero p {
+    font-size: clamp(1rem, 2vw, 2rem);
+    color: antiquewhite;
+    font-family: 'monospace', Courier, sans-serif;
+    text-decoration: underline;
+    margin-bottom: 1%;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: antiquewhite;
+    font-family: 'calibri', Courier, monospace;
 }
 
 .hero h1 span {
+    font-size: clamp(2.5rem, 5.5vw, 5rem);
     color: red;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-style: italic;
 }
 
-.hero nav ul li span{
-    color: red;
+.hero h6 {
+    width: 40%;
+    text-align: right;
+    font-size: 2.8vh;
+    line-height: 1.4;
+    color: white;
+    font-family: Garamond, Georgia, serif;
 }
 
-.hero a{
+.down{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: 20vw;
+}
+
+.down a{
+    font-family: 'calibri', Courier, monospace;
     text-decoration: none;
     background-color: red;
-    border-radius: 5px;
+    border: 2px solid black;
+    border-radius: 0.8rem;
     color: black;
+    font-size: clamp(0.8rem, 1vw, 1.5rem);
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    height: 5vh;
+    width: 15vh;
+    padding: 0px 10px 0px 10px;
+    justify-content: center;
+    transition:.3s;
+    margin-left: 3vh;
 }
 
 .hero a:hover{
     background-color: #f52222;
-    transform: scale(1.1);
-    transition: 0.3s ease;
+    transform:translateY(-3px);
 }
 
+
 .media ul {
-    /* display: flex; */
     list-style-type: none;
-    /* background-color: whitesmoke; */
     position: fixed;
     bottom: 50%;
-    right: 20px;
-    /* display: flex; */
+    right: 5%;
     align-items: center;
     justify-content: center;
     margin: 0px 0px 0px 0px;
@@ -76,25 +107,16 @@ nav {
 }
 
 .media ul li{
-    /* background-color: whitesmoke; */
     align-items: center;
     justify-content: center;
     border-radius: 25%;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
-    height: 32px;
 }
 
 .media ul li a i{
-    /* background-color: whitesmoke; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* border-radius: 25%; */
-    /* margin: 0px 0px 0px 0px; */
-    /* padding: 0px 0px 0px 0px; */
-    height: 32px;
-    font-size: 24px;
-
+    height: 100%;
+    font-size: 5vh;
 }
 
 i:hover {
@@ -105,14 +127,15 @@ i:hover {
 .wa{
     border-radius: 100%;
     background-color: green;
-    height: 36px;
-    width: 36px;
+    height: 8vh;
+    width: 8vh;
     position: fixed;
     bottom: 20px;
     right: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: -3px 8px 10px rgba(6, 209, 3, 0.548);
 }
 
 .wa:hover{
@@ -122,21 +145,46 @@ i:hover {
     z-index: 1000;
 }
 
-.footer {
-    background: #080808;
+.credit{
+    position: fixed;
+    bottom: 2px;
+    left: 0;
     width: 100%;
-    height: 25%;
-    display: inline-flex;
-    Align-items: center;
-    justify-content: center;
-    /* margin: 36px; */
+    font-size: 2vh;
+    text-align: left;
+    padding: 10px 0;
+    color: white;
 }
 
-.bottom {
-    height: 25%;
-    width: 50%;
-    border: 2px solid RED;
-    /* padding: 20px; */
-    align-items: center;
-    text-align: center;
+.credit span{
+    color: red;
+}
+
+@media(max-width:768px){
+    .hero{
+        margin-top:35%;
+        width:90%;
+    }
+
+    .hero h6{
+        width:100%;
+        text-align:left;
+    }
+
+    .down{
+        margin-left:0;
+        flex-wrap:wrap;
+    }
+
+    .media ul{
+        position:static;
+        display:flex;
+        gap:20px;
+        margin-top:30px;
+    }
+
+    .logo{
+        position:static;
+        height:70px;
+    }
 }
